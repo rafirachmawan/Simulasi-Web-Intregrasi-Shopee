@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PremiumStore — Akun Premium Instan & Terpercaya</title>
+  <meta name="description" content="Beli akun premium YouTube, Spotify dengan harga terjangkau. Akun langsung aktif setelah pembayaran!">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+</head>
+<body>
+  <!-- Particles Background -->
+  <div class="particles"></div>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a class="nav-logo" data-navigate="home"><span class="logo-icon">⚡</span><span>PremiumStore</span></a>
+      <div class="nav-links">
+        <a class="nav-link active" data-navigate="home">Beranda</a>
+        <a class="nav-link" data-navigate="claim">Klaim Akun</a>
+        <a class="nav-link" data-navigate="admin-login">Admin</a>
+      </div>
+      <button class="mobile-menu-toggle"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <!-- ==================== PAGE: HOME ==================== -->
+  <section id="page-home" class="page active">
+    <div class="hero">
+      <div class="hero-content">
+        <h1>Akun Premium <span class="gradient-text">Instan & Terpercaya</span></h1>
+        <p>Nikmati layanan premium YouTube, Spotify, dan lainnya dengan harga terjangkau. Akun langsung aktif setelah pembayaran!</p>
+        <div class="hero-badges">
+          <span class="badge">⚡ Instan</span>
+          <span class="badge">🔒 Aman</span>
+          <span class="badge">💯 Garansi</span>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <h2 class="section-title">Pilih Paket <span class="gradient-text">Premium</span></h2>
+      <div id="product-grid" class="product-grid"></div>
+    </div>
+    <div class="section trust-section">
+      <div class="trust-grid">
+        <div class="trust-item"><div class="trust-icon">🛡️</div><h3>Garansi Penuh</h3><p>Akun bermasalah? Kami ganti baru!</p></div>
+        <div class="trust-item"><div class="trust-icon">⚡</div><h3>Instan 3 Detik</h3><p>Akun langsung aktif setelah bayar</p></div>
+        <div class="trust-item"><div class="trust-icon">🔐</div><h3>100% Aman</h3><p>Sistem enkripsi end-to-end</p></div>
+        <div class="trust-item"><div class="trust-icon">📞</div><h3>Support 24/7</h3><p>Tim CS siap membantu Anda</p></div>
+      </div>
+    </div>
+    <div class="footer">© 2026 PremiumStore. Simulasi Demo — Semua data bersifat dummy.</div>
+  </section>
+
+  <!-- ==================== PAGE: CHECKOUT ==================== -->
+  <section id="page-checkout" class="page">
+    <div class="section">
+      <div class="checkout-container">
+        <div class="checkout-summary">
+          <h2>📦 Ringkasan Pesanan</h2>
+          <div id="checkout-product-info" class="checkout-product-info"></div>
+        </div>
+        <div class="checkout-form-container">
+          <h2>📝 Data Pembeli</h2>
+          <form id="checkout-form" class="form">
+            <div class="form-group"><label>Nama Lengkap</label><input type="text" id="checkout-name" placeholder="Masukkan nama lengkap" required></div>
+            <div class="form-group"><label>Email</label><input type="email" id="checkout-email" placeholder="email@contoh.com" required></div>
+            <div class="form-group"><label>Nomor HP</label><input type="tel" id="checkout-phone" placeholder="08xxxxxxxxxx" required></div>
+            <h3 class="mt-2">Metode Pembayaran</h3>
+            <div class="payment-methods" id="payment-methods">
+              <label class="payment-option"><input type="radio" name="payment" value="qris" checked><div class="payment-card"><span class="payment-icon">📱</span><span>QRIS</span></div></label>
+              <label class="payment-option"><input type="radio" name="payment" value="gopay"><div class="payment-card"><span class="payment-icon">💚</span><span>GoPay</span></div></label>
+              <label class="payment-option"><input type="radio" name="payment" value="ovo"><div class="payment-card"><span class="payment-icon">💜</span><span>OVO</span></div></label>
+              <label class="payment-option"><input type="radio" name="payment" value="bank"><div class="payment-card"><span class="payment-icon">🏦</span><span>Transfer Bank</span></div></label>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full"><span class="btn-icon">💳</span> Bayar Sekarang</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PAGE: PAYMENT PROCESSING ==================== -->
+  <section id="page-payment" class="page">
+    <div class="section">
+      <div class="payment-processing">
+        <div id="payment-status" class="payment-status"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PAGE: CLAIM ==================== -->
+  <section id="page-claim" class="page">
+    <div class="section">
+      <div class="claim-container">
+        <div class="claim-header">
+          <h1>🔐 Klaim Akun Premium</h1>
+          <p>Masukkan nomor pesanan Anda untuk mendapatkan akun premium</p>
+        </div>
+        <div class="claim-tabs">
+          <button class="claim-tab active" data-tab="shopee"><span class="tab-icon">🛒</span> Klaim via Shopee</button>
+          <button class="claim-tab" data-tab="web"><span class="tab-icon">🌐</span> Klaim via Web</button>
+        </div>
+
+        <!-- Shopee Claim -->
+        <div id="claim-shopee" class="claim-panel active">
+          <form id="claim-shopee-form" class="form">
+            <div class="form-group">
+              <label>Nomor Pesanan Shopee</label>
+              <input type="text" id="claim-shopee-order" placeholder="Contoh: 2406181234ABCDE" required>
+              <span class="form-hint">Temukan di Shopee → Pesanan Saya → Detail Pesanan</span>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full"><span class="btn-icon">🔍</span> Verifikasi Pesanan</button>
+          </form>
+          <div class="demo-hint">
+            <p>📋 <strong>Demo:</strong> Nomor pesanan untuk testing:</p>
+            <code>2406181234ABCDE</code> — Phone: xxxx<strong>7890</strong><br>
+            <code>2406175678FGHIJ</code> — Phone: xxxx<strong>5432</strong><br>
+            <code>2406151111PQRST</code> — sudah diklaim
+          </div>
+        </div>
+
+        <!-- Phone Verification -->
+        <div id="claim-verify" class="claim-panel"></div>
+
+        <!-- Web Claim -->
+        <div id="claim-web" class="claim-panel">
+          <form id="claim-web-form" class="form">
+            <div class="form-group">
+              <label>Nomor Invoice Web</label>
+              <input type="text" id="claim-web-invoice" placeholder="Contoh: INV-260618-0001" required>
+              <span class="form-hint">Nomor invoice yang Anda terima setelah pembayaran</span>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full"><span class="btn-icon">🔍</span> Cari Pesanan</button>
+          </form>
+          <div class="demo-hint">
+            <p>📋 <strong>Demo:</strong> Lakukan pembelian di Beranda terlebih dahulu, lalu gunakan nomor invoice yang diberikan.</p>
+          </div>
+        </div>
+
+        <!-- Claim Result -->
+        <div id="claim-result" class="claim-panel"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PAGE: ADMIN LOGIN ==================== -->
+  <section id="page-admin-login" class="page">
+    <div class="section">
+      <div class="admin-login-container">
+        <div class="admin-login-card">
+          <span class="admin-avatar">🛡️</span>
+          <h1>Admin Panel</h1>
+          <p>Masuk ke dashboard admin seller</p>
+          <form id="admin-login-form" class="form">
+            <div class="form-group"><label>Username</label><input type="text" id="admin-username" placeholder="Username" required></div>
+            <div class="form-group"><label>Password</label><input type="password" id="admin-password" placeholder="Password" required></div>
+            <button type="submit" class="btn btn-primary btn-full"><span class="btn-icon">🔓</span> Masuk</button>
+          </form>
+          <p class="login-hint">Demo: admin / admin123</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PAGE: ADMIN DASHBOARD ==================== -->
+  <section id="page-admin-dashboard" class="page">
+    <div class="section">
+      <div class="admin-header">
+        <h1>📊 Dashboard Admin</h1>
+        <button class="btn btn-outline btn-sm" id="admin-logout">🚪 Logout</button>
+      </div>
+
+      <div id="admin-stats" class="stats-grid"></div>
+
+      <div class="admin-tabs">
+        <button class="admin-tab active" data-tab="stock">📦 Manajemen Stok</button>
+        <button class="admin-tab" data-tab="api">🔗 API Shopee</button>
+        <button class="admin-tab" data-tab="logs">📋 Log Klaim</button>
+      </div>
+
+      <!-- Stock Management -->
+      <div id="admin-stock" class="admin-panel active">
+        <div id="upload-area" class="upload-area">
+          <div class="upload-icon">📁</div>
+          <p>Klik atau drag file CSV/Excel ke sini</p>
+          <p style="font-size:0.8rem;color:var(--text2);margin-top:4px">Format: email, password, produk</p>
+        </div>
+        <div class="table-container">
+          <table>
+            <thead><tr><th>#</th><th>Email</th><th>Produk</th><th>Status</th><th>Upload</th><th>Diklaim Oleh</th></tr></thead>
+            <tbody id="stock-table-body"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- API Config -->
+      <div id="admin-api" class="admin-panel">
+        <div class="config-card">
+          <h3>🔗 Konfigurasi API Shopee <span id="api-status-dot" class="status-dot offline"></span> <span id="api-status-text" style="font-size:0.8rem;color:var(--danger)">Disconnected</span></h3>
+          <form class="form" onsubmit="event.preventDefault()">
+            <div class="form-group"><label>Client ID</label><input type="text" placeholder="Masukkan Client ID Shopee" value="shop_client_1234567890"></div>
+            <div class="form-group"><label>Client Secret</label><input type="password" placeholder="Masukkan Client Secret" value="sk_secret_abcdefg"></div>
+            <div class="form-group"><label>Webhook URL</label><input type="text" placeholder="https://yourdomain.com/api/webhook" value="https://premiumstore.id/api/shopee/webhook"></div>
+            <button type="button" class="btn btn-primary" id="api-test-btn">🔗 Test Connection</button>
+          </form>
+        </div>
+        <div class="config-card">
+          <h3>📥 Backup: Import Manual Pesanan Shopee</h3>
+          <p style="color:var(--text2);font-size:0.85rem;margin-bottom:16px">Gunakan fitur ini jika API Shopee sedang down. Upload file Excel berisi data pesanan.</p>
+          <button class="btn btn-outline" id="backup-upload-btn">📥 Import Excel Pesanan</button>
+        </div>
+      </div>
+
+      <!-- Log Monitoring -->
+      <div id="admin-logs" class="admin-panel">
+        <div class="filter-bar">
+          <select id="filter-channel"><option value="all">Semua Channel</option><option value="Shopee">Shopee</option><option value="Web">Web</option></select>
+          <input type="text" id="filter-search" placeholder="🔍 Cari nomor pesanan / email...">
+        </div>
+        <div class="table-container">
+          <table>
+            <thead><tr><th>No. Pesanan</th><th>Channel</th><th>Produk</th><th>Pembeli</th><th>Email Akun</th><th>Waktu Klaim</th><th>Expired</th><th>Garansi</th></tr></thead>
+            <tbody id="log-table-body"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/catalog.js"></script>
+  <script src="js/claim.js"></script>
+  <script src="js/admin.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
